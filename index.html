@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess an Number</title>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&family=Bellota+Text:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Monoton&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <h1>Guess Number App</h1> <hr>
+    <p>Enter a guess between 0 to 100</p>
+    <form>
+        <input type="number" name="number" id="input-num"  autocomplete="off" placeholder="Enter number here" min="0" max="100"  required autofocus>
+        <div class="buttons">
+        <button class="submit-btn">Submit</button>
+        <button disabled class="btn-2" type="button">Start Again</button> </div>
+    </form>
+    <p class="result"> </p>
+    <p class="AllYourGuess"></p>
+</body>
+</html>

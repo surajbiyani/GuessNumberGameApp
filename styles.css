@@ -1,0 +1,180 @@
+/* Reset & base styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    background: linear-gradient(135deg, #a1c4fd, #c2e9fb);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    color: #333;
+}
+
+/* Heading */
+h1 {
+    font-size: 3rem;
+    color: #00695c;
+    margin-bottom: 0.5rem;
+    font-weight: 800;
+}
+
+/* Instructions */
+p {
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+}
+
+/* Form styling */
+form {
+    background: white;
+    padding: 2rem;
+    border-radius: 1.2rem;
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    margin-top: 1rem;
+    animation: fadeIn 0.5s ease;
+}
+
+/* Input field */
+#input-num {
+    font-size: 1.4rem;
+    width: 100%;
+    max-width: 300px;
+    padding: 0.6rem 1rem;
+    border: 2px solid #80cbc4;
+    border-radius: 8px;
+    outline: none;
+    margin-bottom: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#input-num:focus {
+    border-color: #00796b;
+    box-shadow: 0 0 5px rgba(0, 121, 107, 0.3);
+}
+
+#input-num.win {
+    border-color: #4caf50;
+    box-shadow: 0 0 10px #4caf50;
+}
+
+/* Buttons container */
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+/* Button styles */
+button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.submit-btn {
+    background-color: #009688;
+    color: white;
+}
+
+.submit-btn:hover:enabled {
+    background-color: #00796b;
+}
+
+.submit-btn:disabled {
+    background-color: #b2dfdb;
+    cursor: not-allowed;
+}
+
+/* Start Again Button */
+.btn-2 {
+    background-color: #e0e0e0;
+    color: #757575;
+    cursor: not-allowed;
+}
+
+.btn-2:enabled {
+    background-color: #ff7043;
+    color: white;
+    cursor: pointer;
+}
+
+.btn-2:hover:enabled {
+    background-color: #f4511e;
+}
+
+/* Result messages */
+.result {
+    margin-top: 1rem;
+    font-size: 1.4rem;
+    font-weight: bold;
+    min-height: 2rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.result.success {
+    color: green;
+    animation: pop 0.3s ease;
+}
+
+.result.error {
+    color: red;
+    animation: shake 0.3s ease;
+}
+
+/* Guess History */
+.AllYourGuess {
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Animations */
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-4px); }
+    50% { transform: translateX(4px); }
+    75% { transform: translateX(-4px); }
+}
+
+@keyframes pop {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive design */
+@media screen and (max-width: 500px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    form {
+        padding: 1.5rem;
+    }
+
+    #input-num {
+        font-size: 1.2rem;
+    }
+
+    button {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+    }
+}
